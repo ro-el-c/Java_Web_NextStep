@@ -26,4 +26,14 @@ class StringCalculatorTest {
         assertEquals(0, stringCalculator.add(withBlank));
     }
 
+    @Test
+    public void only_number() throws Exception {
+        // given
+        String onlyNumber = "3";
+
+        // then
+        assertEquals(3, stringCalculator.add(onlyNumber));
+
+    }
+
 }
