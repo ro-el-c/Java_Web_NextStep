@@ -15,6 +15,7 @@ class StringCalculatorTest {
     }
 
     @Test
+    @DisplayName("입력된 문자열이 null 또는 빈 문자열인 경우")
     public void null_or_blank() throws Exception {
         // given
         String nullText = null;
@@ -28,6 +29,7 @@ class StringCalculatorTest {
     }
 
     @Test
+    @DisplayName("구분자 없이 숫자만 입력된 경우")
     public void only_number() throws Exception {
         // given
         String onlyNumber = "3";
