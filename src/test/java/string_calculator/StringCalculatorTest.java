@@ -55,7 +55,7 @@ class StringCalculatorTest {
     public void numbers_with_comma() throws Exception {
         // given
         String text = "1,2";
-        String text2 = "1;2;3";
+        String text2 = "1,2:3";
                 
         // when
         int result = stringCalculator.add(text);

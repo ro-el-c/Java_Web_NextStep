@@ -22,7 +22,7 @@ public class StringCalculator {
             String customDelimiter = matcher.group(1);
             numberStrings = matcher.group(2).split(customDelimiter);
         } else { //TODO: else 제거
-            numberStrings = inputText.split(",|;");
+            numberStrings = inputText.split(",|:");
         }
 
         numbers = toIntegerList(numberStrings);
