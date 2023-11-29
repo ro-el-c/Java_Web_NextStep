@@ -6,10 +6,10 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class StringCalculator {
-    public static int add(String inputText) {
+    public int add(String inputText) {
         List<Integer> numbers;
 
-        if (inputText.isBlank()) {
+        if (inputText == null || inputText.isBlank()) {
             return 0;
         }
 
@@ -39,10 +39,5 @@ public class StringCalculator {
         }
 
         return result;
-    }
-
-    public static void main(String[] args) {
-        System.out.println("add(\"//;\\n1;2;3\") = " + add("//;\n1;2;3")); // 6
-        System.out.println("add(\"2\") = " + add("2")); // 2
     }
 }
