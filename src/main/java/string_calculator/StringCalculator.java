@@ -14,7 +14,11 @@ public class StringCalculator {
         }
 
         try {
-            return Integer.parseInt(inputText);
+            int number = Integer.parseInt(inputText);
+            if (number < 0) {
+                throw new RuntimeException("음수가 존재합니다.");
+            }
+            return number;
         } catch (Exception e) {
             String[] numberStrings;
 
