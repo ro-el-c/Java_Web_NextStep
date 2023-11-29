@@ -82,4 +82,14 @@ class StringCalculatorTest {
 
     }
 
+    @Test
+    @DisplayName("음수를 전달하는 경우")
+    public void negative_number() throws Exception {
+        // given
+        String withNegativeNumber = "-1,3:5";
+
+        // then
+        assertThrowsExactly(RuntimeException.class, () -> stringCalculator.add(withNegativeNumber));
+
+    }
 }
