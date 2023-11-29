@@ -67,4 +67,19 @@ class StringCalculatorTest {
 
     }
 
+    @Test
+    @DisplayName("커스텀 구분자를 사용하는 경우")
+    public void custom_delimiter() throws Exception {
+        // given
+        String textWithDelimiter = "//@\n6@7@1@2";
+
+        // when
+        int answer = 16;
+        int result = stringCalculator.add(textWithDelimiter);
+
+        // then
+        assertEquals(answer, result);
+
+    }
+
 }
