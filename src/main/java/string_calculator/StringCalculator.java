@@ -25,7 +25,7 @@ public class StringCalculator {
             numberStrings = inputText.split(",|;");
         }
 
-        numbers = Arrays.stream(numberStrings).map(Integer::parseInt).toList();
+        numbers = toIntegerList(numberStrings);
         if (numbers.stream().anyMatch(number -> number < 0)) {
             throw new RuntimeException("음수가 존재합니다.");
         }
@@ -34,11 +34,22 @@ public class StringCalculator {
             return Integer.parseInt(inputText);
         }
 
+        int result = sum(numbers);
+
+        return result;
+    }
+
+    private static List<Integer> toIntegerList(String[] numberStrings) {
+        return Arrays.stream(numberStrings)
+                .map(Integer::parseInt)
+                .toList();
+    }
+
+    private static int sum(List<Integer> numbers) {
         int result = 0;
         for (Integer num : numbers) {
             result += num;
         }
-
         return result;
     }
 }
