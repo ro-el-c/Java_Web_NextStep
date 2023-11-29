@@ -49,5 +49,22 @@ class StringCalculatorTest {
         assertThrowsExactly(RuntimeException.class, () -> stringCalculator.add(onlyNumber2));
 
     }
+    
+    @Test
+    @DisplayName("쉼표 또는 세미콜론을 구분자로 2개 이상의 숫자를 입력한 경우")
+    public void numbers_with_comma() throws Exception {
+        // given
+        String text = "1,2";
+        String text2 = "1;2;3";
+                
+        // when
+        int result = stringCalculator.add(text);
+        int result2 = stringCalculator.add(text2);
+
+        // then
+        assertEquals(3, result);
+        assertEquals(6, result2);
+
+    }
 
 }
