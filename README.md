@@ -6,7 +6,7 @@
 <br><br>
 
 > ## 목차
-1장. 첫 번째 양파 껍질 벗기<br>
+[1장. 첫 번째 양파 껍질 벗기](https://github.com/ro-el-c/Java_Web_NextStep/tree/main/src/main/java/string_calculator)<br>
 2장 문자열 계산기 구현을 통한 테스트와 리팩토링<br>
 3장 개발 환경 구축 및 웹 서버 실습 요구사항<br>
 4장 HTTP 웹 서버 구현을 통해 HTTP 이해하기<br>
