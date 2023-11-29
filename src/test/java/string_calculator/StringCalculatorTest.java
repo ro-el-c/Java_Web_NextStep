@@ -1,6 +1,7 @@
 package string_calculator;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -33,6 +34,17 @@ class StringCalculatorTest {
 
         // then
         assertEquals(3, stringCalculator.add(onlyNumber));
+
+    }
+
+    @Test
+    @DisplayName("구분자 없이 숫자가 하나인데 음수인 경우")
+    public void containNegativeNumber() throws Exception {
+        // given
+        String onlyNumber2 = "-1";
+
+        // then
+        assertThrowsExactly(RuntimeException.class, () -> stringCalculator.add(onlyNumber2));
 
     }
 
