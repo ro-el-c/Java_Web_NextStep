@@ -8,14 +8,12 @@ import java.util.regex.Pattern;
 public class StringCalculator {
 
     public int add(String inputText) {
-        List<Integer> numbers;
-
         if (isBlank(inputText)) {
             return 0;
         }
 
         String[] numberStrings = splitText(inputText);
-        numbers = toIntegerList(numberStrings);
+        List<Integer> numbers = toIntegerList(numberStrings);
         int result = sum(numbers);
 
         return result;
@@ -40,7 +38,6 @@ public class StringCalculator {
     private static List<Integer> toIntegerList(String[] numberStrings) {
         List<Integer> numbers = new ArrayList<>();
 
-
         for (String numberText : numberStrings) {
             int number = toInteger(numberText);
             validateNumber(number);
@@ -53,7 +50,7 @@ public class StringCalculator {
     private static int toInteger(String numberText) {
         try {
             return Integer.parseInt(numberText);
-        } catch (Exception e) {
+        } catch (NumberFormatException e) {
             throw new RuntimeException("숫자가 아닌 문자가 포함되어 있습니다.");
         }
     }
