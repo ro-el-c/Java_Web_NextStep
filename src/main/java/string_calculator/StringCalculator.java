@@ -27,7 +27,7 @@ public class StringCalculator {
                 String customDelimiter = matcher.group(1);
                 numberStrings = matcher.group(2).split(customDelimiter);
             } else {
-                numberStrings = inputText.split(", | :");
+                numberStrings = inputText.split(",|;");
             }
 
             numbers = Arrays.stream(numberStrings).map(Integer::parseInt).toList();
